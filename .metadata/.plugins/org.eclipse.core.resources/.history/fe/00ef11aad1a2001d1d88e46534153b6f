@@ -1,0 +1,26 @@
+package com.pragati;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Q1 {
+
+	ChromeDriver driver;
+	
+	public void open() throws InterruptedException
+	{
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Desktop\\SDM Exam\\lib\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("https://www.w3schools.com/");
+		driver.manage().window().maximize();
+		driver.findElement(By.id("signupbtn_topnav")).click();
+		Thread.sleep(500);
+		driver.findElement(By.id("signUpFromSignup")).click();
+	}
+	public static void main(String[] args) {
+		Q1 q = new Q1();
+		
+		q.open();
+	}
+
+}

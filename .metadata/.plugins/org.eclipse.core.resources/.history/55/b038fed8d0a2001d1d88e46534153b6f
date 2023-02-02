@@ -1,0 +1,22 @@
+package com.pragati;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Q1 {
+
+	ChromeDriver driver;
+	
+	public void open()
+	{
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\Desktop\\SDM Exam\\lib\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("https://www.w3schools.com/");
+		driver.manage().window().maximize();
+	}
+	public static void main(String[] args) {
+		Q1 q = new Q1();
+		
+		q.open();
+	}
+
+}
